@@ -54,6 +54,9 @@ app.delete('/usuarios/:id', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('API está rodando! Use /usuarios para acessar os usuários.');
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`API rodando na porta ${PORT}`));
